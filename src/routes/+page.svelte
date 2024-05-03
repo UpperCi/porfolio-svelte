@@ -1,5 +1,7 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
+  import Subtitle from "./Subtitle.svelte";
+  import IconLink from "./IconLink.svelte";
 </script>
 
 <svelte:head>
@@ -8,38 +10,95 @@
 </svelte:head>
 
 <main>
-<div class="card">
-  <h1>Dani Verschoor</h1>
-  <h2>Webontwikkelaar</h2>
+<h1>Dani Verschoor</h1>
+<h3>Creative Developer</h3>
+<p>Building stable and accessible experiences.</p>
+<div class="project-wrapper">
+<Subtitle>Web Development</Subtitle>
+<div class="section">
+  <ProjectCard image="claire.png">
+    <h2>Claire</h2>
+    <IconLink href="https://github.com/unlimited-hr/Claire-api/" src="icons/Github.svg">Github</IconLink>
+    <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Website.svg">Web</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Back-end Developer
+    <br>
+    <strong>Technologies</strong>: NodeJS
+    <br>
+    <br>
+    <em>Claire is an air quality sensor that gives personalized advice based on your indoor climate. I developed it's API, which accomodates both an IoT device and a mobile app.</em>
+    </p>
+  </ProjectCard>
+  <ProjectCard image="charon_login.png">
+    <h2>Charon Login</h2>
+    <IconLink href="https://github.com/weareyipyip/charon_login/" src="icons/Github.svg">Github</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Back-end Developer
+    <br>
+    <strong>Technologies</strong>: Elixir
+    <br>
+    <br>
+    <em>CharonLogin is an Elixir library for modular authentication procedures. Developers can define multi-factor authentication flows with a couple lines of configuration. Developed at YipYip.</em>
+    </p>
+  </ProjectCard>
+  <ProjectCard image="missmatch.png">
+    <h2>MissMatch</h2>
+    <IconLink href="https://github.com/MattPermentier/MisMatch/" src="icons/Github.svg">Github</IconLink>
+    <IconLink href="https://cmgt.hr.nl/projecten/missmatch/" src="icons/Website.svg">Apericot Studio</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Developer
+    <br>
+    <strong>Technologies</strong>: PHP, WordPress
+    <br>
+    <br>
+    <em>MissMatch is WordPress plug-in to make your site more accessible. It looks at the colors used on your site and transforms them to increase the contrast, taking into account the WCAG.</em>
+    </p>
+  </ProjectCard>
 </div>
-<ProjectCard title="Manor Madness" image="background.png">
-  <p>
-  <strong>Role</strong>: Game Designer
-  <br>
-  <strong>Technologies</strong>: Unity 3D
-  <br>
-  <em>Manor Madness is a 3D, third-person sandbox game. In this game, you play a young ghost, Ghustav, who wants to learn how to become a real poltergeist.</em></p>
-  <a href="">GitHub Repository</a>
-  <br>
-  <a href="">Steam Page</a>
-  <br>
-  <a href="">Website</a>
-</ProjectCard>
-<ProjectCard title="Charon Login" image="background.png">
-</ProjectCard>
-<ProjectCard title="Claire" image="background.png">
-</ProjectCard>
-<ProjectCard title="MissMatch" image="background.png">
-</ProjectCard>
 
-<a class="link card" href="#">GitHub</a>
-<a class="link card" href="#">LinkedIn</a>
-<a class="link card" href="#">Curriculum Vitae</a>
+<Subtitle>Game Development</Subtitle>
+<div class="section">
+  <ProjectCard image="manor_madness.jpg">
+    <h2>Manor Madness</h2>
+    <IconLink href="https://github.com/ApericotStudio/Poltergeist/" src="icons/Github.svg">Github</IconLink>
+    <IconLink href="https://store.steampowered.com/app/2719710/Manor_Madness/" src="icons/Steam.svg">Steam</IconLink>
+    <IconLink href="https://project.cmi.hr.nl/2023_2024/game_apricot/" src="icons/Website.svg">Apericot Studio</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Game Designer
+    <br>
+    <strong>Technologies</strong>: Unity 3D
+    <br>
+    <br>
+    <em>Manor Madness is a 3D, third-person sandbox game. It focuses on fun derived from physical comedy and strategy. As a designer, I conducted weekly playtests and helped shape the gameplay mechanics.</em>
+    </p>
+  </ProjectCard>
+  <ProjectCard image="gamejams.png">
+    <h2>Game Jams</h2>
+    <IconLink href="https://cmgt.hr.nl/projecten/missmatch/" src="icons/Website.svg">Itch.io</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Developer, Designer, Artist
+    <br>
+    <strong>Technologies</strong>: Godot, PICO-8
+    <br>
+    <br>
+    <em>Over the years I have participated in multiple game jams, forcing me to design and develop a game in a short time-span, typically a weekend.</em>
+    </p>
+  </ProjectCard>
+</div>
+</div>
+
+<Subtitle>About Dani</Subtitle>
+<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Github.svg">GitHub</IconLink>
+<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/LinkedIn.svg">LinkedIn</IconLink>
+<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Website.svg">Curriculum Vitae</IconLink>
+<div class="person-wrapper">
+  <img src="dani.png">
+</div>
 </main>
 
 <style>
 :global(body) {
-  background-color: #bbb;
+  background-color: #000000;
   margin: 0;
 }
 
@@ -47,30 +106,55 @@ main :global(*) {
   box-sizing: border-box;
 }
 
-main h1 {
+main h1, main h3{
   margin: 0;
   text-align: center;
 }
 
+main h3 {
+  font-size: 20px;
+  margin-top: -4px;
+}
+
+main p {
+  color: white;
+}
+
 main {
-  margin: 14px;
+  padding: 10px;
   font-family: "Aspekta", serif;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+div.person-wrapper {
+  margin-bottom: -8px;
+}
+
+div.person-wrapper img {
+  object-fit: scale-down;
+  margin-bottom: -8px;
+  width: 100%;
+}
+
+div.project-wrapper {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+div.section {
+  max-width: 820px;
 }
 
 :global(.card) {
   width: 100%;
   margin: 12px 0;
-  background-color: #fafafa;
-  box-shadow: 4px 4px 0 0 #000;
+  background-color: #021C34;
   color: #222;
 }
 
-a.link {
-  padding: 2px;
-  display: block;
-  font-size: 24px;
-  font-weight: 700;
-  text-decoration: none;
-  text-align: center;
+:global(h1, h2, h3) {
+  color: #EAD823;
 }
 </style>
