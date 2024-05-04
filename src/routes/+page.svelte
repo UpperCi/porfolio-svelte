@@ -12,11 +12,11 @@
 <main>
 <h1>Dani Verschoor</h1>
 <h3>Creative Developer</h3>
-<p>Building stable and accessible experiences.</p>
+<p class="tagline">Building stable and accessible software.</p>
 <div class="project-wrapper">
 <Subtitle>Web Development</Subtitle>
 <div class="section">
-  <ProjectCard image="claire.png">
+  <ProjectCard image="claire.png" alt="Wooden case containing electronics. Text saying Claire with air highlighted.">
     <h2>Claire</h2>
     <IconLink href="https://github.com/unlimited-hr/Claire-api/" src="icons/Github.svg">Github</IconLink>
     <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Website.svg">Web</IconLink>
@@ -29,7 +29,7 @@
     <em>Claire is an air quality sensor that gives personalized advice based on your indoor climate. I developed it's API, which accomodates both an IoT device and a mobile app.</em>
     </p>
   </ProjectCard>
-  <ProjectCard image="charon_login.png">
+  <ProjectCard image="charon_login.png" alt="Login prompt asking for a code and a password in Dutch. Text saying Charon Login." layout="invert">
     <h2>Charon Login</h2>
     <IconLink href="https://github.com/weareyipyip/charon_login/" src="icons/Github.svg">Github</IconLink>
     <p slot="description">
@@ -41,7 +41,7 @@
     <em>CharonLogin is an Elixir library for modular authentication procedures. Developers can define multi-factor authentication flows with a couple lines of configuration. Developed at YipYip.</em>
     </p>
   </ProjectCard>
-  <ProjectCard image="missmatch.png">
+  <ProjectCard image="missmatch.png" alt="Color wheel with a face and a bow. Text saying MissMatch.">
     <h2>MissMatch</h2>
     <IconLink href="https://github.com/MattPermentier/MisMatch/" src="icons/Github.svg">Github</IconLink>
     <IconLink href="https://cmgt.hr.nl/projecten/missmatch/" src="icons/Website.svg">Apericot Studio</IconLink>
@@ -58,7 +58,7 @@
 
 <Subtitle>Game Development</Subtitle>
 <div class="section">
-  <ProjectCard image="manor_madness.jpg">
+  <ProjectCard layout="invert" image="manor_madness.jpg" alt="Ghost zapping through a hallway and scaring people. Text saying Manor Madness.">
     <h2>Manor Madness</h2>
     <IconLink href="https://github.com/ApericotStudio/Poltergeist/" src="icons/Github.svg">Github</IconLink>
     <IconLink href="https://store.steampowered.com/app/2719710/Manor_Madness/" src="icons/Steam.svg">Steam</IconLink>
@@ -72,7 +72,7 @@
     <em>Manor Madness is a 3D, third-person sandbox game. It focuses on fun derived from physical comedy and strategy. As a designer, I conducted weekly playtests and helped shape the gameplay mechanics.</em>
     </p>
   </ProjectCard>
-  <ProjectCard image="gamejams.png">
+  <ProjectCard image="gamejams.png" alt="Four game titles: Unplugged, Pursuit, Earth Apple and Wager.">
     <h2>Game Jams</h2>
     <IconLink href="https://cmgt.hr.nl/projecten/missmatch/" src="icons/Website.svg">Itch.io</IconLink>
     <p slot="description">
@@ -81,7 +81,7 @@
     <strong>Technologies</strong>: Godot, PICO-8
     <br>
     <br>
-    <em>Over the years I have participated in multiple game jams, forcing me to design and develop a game in a short time-span, typically a weekend.</em>
+    <em>Over the years I have participated in multiple game jams, forcing me to design and develop games in a short time-span, typically a weekend.</em>
     </p>
   </ProjectCard>
 </div>
@@ -118,6 +118,11 @@ main h3 {
 
 main p {
   color: white;
+}
+
+p.tagline {
+  width: 100%;
+  text-align: center;
 }
 
 main {

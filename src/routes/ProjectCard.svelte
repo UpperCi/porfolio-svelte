@@ -2,10 +2,18 @@
   import { onMount } from 'svelte';
   import BezierEasing from 'bezier-easing';
   export let image;
+  export let alt;
+  export let layout;
   let card;
   let flipStart = 0;
   const FLIP_TIME = 500;
   const smooth = BezierEasing(0, 0, 0.2, 1)
+
+  const onKey = (e) => {
+    if (e.key == "Enter") {
+      onFlip();
+    }
+  }
 
   const onFlip = () => {
     if (flipStart != 0) return;
@@ -43,8 +51,8 @@
 </script>
 
 <div class="card-container">
-  <div bind:this={card} on:click={onFlip} class="card back">
-    <div class="card-back">
+  <div bind:this={card} on:click={onFlip} on:keydown={onKey} class="card back" tabindex="0">
+    <div class={`card-back ${layout == "invert" ? "invert" : ""}`}>
       <div class="summary">
         <slot />
       </div>
@@ -54,7 +62,7 @@
       </div>
     </div>
     <div class="card-front">
-      <img src={image}>
+      <img src={image} alt={alt}>
     </div>
   </div>
 </div>
@@ -80,22 +88,35 @@ div.card-back {
   display: flex;
 }
 
+div.card-back.invert {
+  flex-direction: row-reverse;
+}
+
 div.summary {
   width: 40%;
 }
 
-div.description {
+div.card-back .description {
   width: 60%;
   margin-left: 8px;
   line-height: 1.25em;
 }
 
-:global(.description p) {
+div.card-back.invert .description {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+:global(.card-back .description p) {
   color: #EDE7A6;
   background-color: #123450;
   padding: 8px;
   border-radius: 1em 0 0 1em;
   margin: 0;
+}
+
+:global(.card-back.invert .description p) {
+  border-radius: 0 1em 1em 0;
 }
 
 div.card-front {
@@ -120,7 +141,7 @@ div.card.back div.card-front {
   display: none;
 }
 
-:global(.card h2) {
+:global(.card-back h2) {
   font-size: 24px;
   margin: 0;
   margin-bottom: 16px;
@@ -129,5 +150,10 @@ div.card.back div.card-front {
   padding-left: 12px;
   border-left: 4px solid #DBD8DD;
   line-height: 1.25;
+}
+
+:global(.card-back.invert h2) {
+  border-right: 4px solid #DBD8DD;
+  border-left: none;
 }
 </style>
