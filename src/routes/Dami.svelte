@@ -4,8 +4,8 @@
   let dami;
   let flipStart = 0;
   let flipPos = 0;
-  const FLIP_TIME = 750;
-  const smooth = BezierEasing(0, 0.0, 0.3, 1)
+  const FLIP_TIME = 900;
+  const smooth = BezierEasing(0, 0.0, 0.1, 1)
 
   const onKey = (e) => {
     if (e.key == "Enter") {
