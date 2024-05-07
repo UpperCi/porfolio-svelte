@@ -3,7 +3,7 @@
   import BezierEasing from 'bezier-easing';
   export let image;
   export let alt;
-  export let layout;
+  export let layout = "";
   let card;
   let flipStart = 0;
   const FLIP_TIME = 500;
@@ -17,7 +17,6 @@
 
   const onFlip = () => {
     if (flipStart != 0) return;
-    card.classList.add("flipping");
     const flipFrame = (back = false) => (ms) => {
       if (flipStart == 0) {
         flipStart = ms;

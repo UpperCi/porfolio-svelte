@@ -1,5 +1,6 @@
 <script>
   import ProjectCard from "./ProjectCard.svelte";
+  import Dami from "./Dami.svelte";
   import Subtitle from "./Subtitle.svelte";
   import IconLink from "./IconLink.svelte";
 </script>
@@ -91,9 +92,7 @@
 <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Github.svg">GitHub</IconLink>
 <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/LinkedIn.svg">LinkedIn</IconLink>
 <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Website.svg">Curriculum Vitae</IconLink>
-<div class="person-wrapper">
-  <img src="dani.png">
-</div>
+<Dami />
 </main>
 
 <style>
@@ -131,16 +130,6 @@ main {
   overflow: hidden;
   margin: 0 auto;
   max-width: 400px;
-}
-
-div.person-wrapper {
-  margin-bottom: -8px;
-}
-
-div.person-wrapper img {
-  object-fit: scale-down;
-  margin-bottom: -8px;
-  width: 100%;
 }
 
 div.project-wrapper {
