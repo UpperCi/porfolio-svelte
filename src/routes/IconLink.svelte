@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   export let src = "";
   export let href = "";
+  export let dark = false;
   let svgRoot;
 
   onMount(() => {
@@ -13,7 +14,7 @@
   });
 </script>
 
-<a href={href}>
+<a class:dark={dark} href={href}>
   <div bind:this={svgRoot}></div>
   <p><slot /></p>
 </a>
@@ -22,20 +23,28 @@
 :global(svg) {
   width: 1.75em;
   height: 1.75em;
-  color: #9F9FED;
+  color: #5E4F89;
   margin-bottom: -3px;
 }
 
 a {
   font-weight: 700;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 16px;
-  color: #9F9FED;
+  color: #5E4F89;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 4px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.dark, a.dark :global(svg) {
+  color: #EEEDE2;
 }
 
 p {

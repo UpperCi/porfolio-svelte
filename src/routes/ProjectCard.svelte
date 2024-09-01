@@ -41,11 +41,9 @@
     requestAnimationFrame(flipFrame(false))
   }
   // set card to front
-  onMount(() => {
-    requestAnimationFrame((_) => {
-      card.classList.remove("back")
-      card.classList.add("front")
-    });
+  onMount(async () => {
+    card.classList.remove("back")
+    card.classList.add("front")
   });
 </script>
 
@@ -72,7 +70,9 @@ div.card {
   font-size: 12px;
   cursor: pointer;
   max-width: 400px;
+  width: 100%;
   min-height: 200px;
+  border-radius: 2px;
 }
 
 img {
@@ -80,6 +80,7 @@ img {
   width: 100%;
   object-fit: cover;
   margin: 0;
+  border-radius: 2px;
 }
 
 div.card-back {
@@ -107,11 +108,12 @@ div.card-back.invert .description {
 }
 
 :global(.card-back .description p) {
-  color: #EDE7A6;
-  background-color: #123450;
+  color: #2C2541;
+  background-color: #BCB18A;
   padding: 8px;
-  border-radius: 1em 0 0 1em;
+  border-radius: 4px 0 0 4px;
   margin: 0;
+  font-size: 14px !important;
 }
 
 :global(.card-back.invert .description p) {
@@ -141,18 +143,19 @@ div.card.back div.card-front {
 }
 
 :global(.card-back h2) {
+  color: #747147;
   font-size: 24px;
   margin: 0;
-  margin-bottom: 16px;
   width: 100%;
   font-weight: 700;
   padding-left: 12px;
-  border-left: 4px solid #DBD8DD;
+  border-left: 4px solid #747147;
   line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
 :global(.card-back.invert h2) {
-  border-right: 4px solid #DBD8DD;
+  border-right: 4px solid #787445;
   border-left: none;
 }
 </style>

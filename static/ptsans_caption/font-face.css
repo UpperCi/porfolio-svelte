@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'PTSansCaption';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('PTSansCaption-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'PTSansCaption';
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url('PTSansCaption-Bold.ttf');
+}

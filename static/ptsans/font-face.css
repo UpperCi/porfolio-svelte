@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'PTSans';
+  src: url('PTSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'PTSans';
+  font-weight: bold;
+  src: url('PTSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'PTSans';
+  font-style: italic;
+  src: url('PTSans-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'PTSans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('PTSans-BoldItalic.ttf');
+}
