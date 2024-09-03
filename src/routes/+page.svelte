@@ -114,7 +114,7 @@
   <Subtitle>About Dani</Subtitle>
 <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Github.svg" dark={true}>GitHub</IconLink>
 <IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/LinkedIn.svg" dark={true}>LinkedIn</IconLink>
-<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Website.svg" dark={true}>Curriculum Vitae</IconLink>
+<IconLink href="/CV_EN.pdf" src="icons/Website.svg" dark={true}>Curriculum Vitae</IconLink>
 </SiteObject>
 <Dami />
 </main>
