@@ -72,6 +72,7 @@ div.card {
   max-width: 400px;
   width: 100%;
   min-height: 200px;
+  height: 100%;
   border-radius: 2px;
 }
 
@@ -84,6 +85,7 @@ img {
 }
 
 div.card-back {
+  height: 100%;
   margin: 18px 0;
   display: flex;
 }
@@ -123,6 +125,7 @@ div.card-back.invert .description {
 div.card-front {
   max-width: 400px;
   width: 100%;
+  height: 100%;
   position: absolute;
   bottom: 0;
   top: 0;
