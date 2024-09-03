@@ -78,6 +78,37 @@
 </div>
 
 <SiteObject>
+  <Subtitle>App Ontwikkeling</Subtitle>
+</SiteObject>
+<div class="section">
+  <ProjectCard image="loopje.png" alt="Kaart van de Kralingse plas met twee routes uitgestippeld. Een grijze route gaat door de stad, een groene route gaat langs de plas.">
+    <h2>Loopje</h2>
+    <IconLink href="https://github.com/UpperCi/Loopje_Server" src="icons/Github.svg">Github Back-end</IconLink>
+    <IconLink href="https://cmgt.hr.nl/projecten/loopje/" src="icons/Website.svg">Showcase Site</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Solo Project
+    <br>
+    <strong>Technologies</strong>: Flutter, Elixir, Mapbox
+    <br>
+    <br>
+    <em>Loopje is een navigatieapp die de rustigste looproute vindt, in plaats van de snelste. Ik heb zowel de app als de API ontworpen en ontwikkeld.</em>
+    </p>
+  </ProjectCard>
+  <ProjectCard image="replay.png" alt="App die 3D render van een persoon weergeeft. De app heeft UI voor het afspelen van een video." layout="invert">
+    <h2>Replay App</h2>
+    <IconLink href="https://github.com/2024-Medialab1-Team5/Replay-App/" src="icons/Github.svg">Github</IconLink>
+    <p slot="description">
+    <strong>Role</strong>: Lead Developer
+    <br>
+    <strong>Technologies</strong>: React Native, Three.js
+    <br>
+    <br>
+    <em>Een app die de opgenomen bewegingen van een persoon kan afspelen. Gemaakt voor een IOT apparaat van de opdrachtgever dat bewegingen meet. Bedoeld voor fysiotherapeuten.</em>
+    </p>
+  </ProjectCard>
+</div>
+
+<SiteObject>
 <Subtitle>Game Dev & Design</Subtitle>
 </SiteObject>
 <div class="section">
@@ -112,8 +143,8 @@
 
 <SiteObject>
   <Subtitle>Over Dani</Subtitle>
-<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/Github.svg" dark={true}>GitHub</IconLink>
-<IconLink href="https://cmgt.hr.nl/projecten/claire/" src="icons/LinkedIn.svg" dark={true}>LinkedIn</IconLink>
+<IconLink href="https://github.com/UpperCi/" src="icons/Github.svg" dark={true}>GitHub</IconLink>
+<IconLink href="https://www.linkedin.com/in/dani-verschoor-4200891ba/" src="icons/LinkedIn.svg" dark={true}>LinkedIn</IconLink>
 <IconLink href="/CV_NL.pdf" src="icons/Website.svg" dark={true}>Curriculum Vitae</IconLink>
 </SiteObject>
 <Dami />
